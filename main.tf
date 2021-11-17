@@ -1,5 +1,6 @@
 provider "aws" {
   region = var.aws_region
+  profile = "learn-terraform-aws-instance" # not needed for "remote" backend
 }
 
 provider "cloudflare" {}
