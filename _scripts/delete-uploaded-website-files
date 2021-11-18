@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -e -x
+
+aws --profile "learn-terraform-aws-instance" s3 rm s3://$(terraform output -raw website_bucket_name)/ --recursive
+
+# Also need to to `terraform destroy` to delete S3 buckets.

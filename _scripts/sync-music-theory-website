@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e -x
+
+aws --profile "learn-terraform-aws-instance" s3 sync --delete ../../_apps-and-libs/nomis-music-theory/resources/pub-prod/ s3://$(terraform output -raw website_bucket_name)/
